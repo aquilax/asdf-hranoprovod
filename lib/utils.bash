@@ -38,9 +38,9 @@ download_release() {
   filename="$2"
 
   # url="$GH_REPO/archive/v${version}.tar.gz"
-  url="$GH_REPO/archive/v${version}/hranoprovod-cli_${version}_Linux_x86_64.tar.gz"
+  url="$GH_REPO/releases/download/v${version}/hranoprovod-cli_${version}_Linux_x86_64.tar.gz"
 
-  echo "* Downloading $TOOL_NAME release $version..."
+  echo "* Downloading $TOOL_NAME release $version from $url ..."
   curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
 }
 
